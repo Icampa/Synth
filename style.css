@@ -1,0 +1,127 @@
+ body {
+    margin: 0;
+    padding:0;
+    background-image: url(walk2.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+  @media screen and (max-width: 940px){
+.wrapper {
+  display: none;
+}
+}
+
+canvas {
+  display: block;
+}
+
+button {
+    background-color: transparent;
+    border-color: transparent;
+    opacity:1;
+}
+
+.wrapper {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns:repeat(4, 1fr);
+      grid-auto-flow: row;
+      bottom:0;
+      right:0;
+      overflow-x: hidden;
+      opacity:100;
+}
+
+a{
+    color:rgb(255,232,5);
+}
+.box {
+    height: 27vh;
+    justify-content: center;
+    opacity:1;
+}
+
+.blank1 {
+    font-family: 'fivo_sans_modernregular';
+    color:blue;
+    opacity: 1;
+    height: 27vh;
+    justify-content: center;
+    text-align: left;
+    font-size: 1.1vw;
+    padding-left:100px;
+    padding-right:100px;
+    padding-top:34px;
+}
+
+.blank2 {
+    grid-column: 2 /span 3;
+    opacity: 1;
+    height: 27vh;
+}
+
+
+.wrapper2 {
+      position: fixed;
+      width: 100%;
+      height: 9vh;
+      display: grid;
+      grid-template-columns:repeat(10, 1fr);
+      grid-auto-flow: row;
+      bottom:0;
+      right:0;
+      border-top-style: solid;
+      border-top-width: .1px;
+      border-top-color: black;
+      overflow-x: hidden;
+      opacity:100;
+}
+
+.title{
+    font-family: 'fivo_sans_modernregular';
+    font-size: 2.8vw;
+    padding-top: 1vw;
+    padding-left: 1vw;
+    grid-column: 1 /span 3;
+}
+
+.about{
+    font-family: 'fivo_sans_modernregular';
+    font-size: .8vw;
+    padding-top: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    grid-column: 4 /span 4;
+}
+
+.contact{
+    font-family: 'fivo_sans_modernregular';
+    font-size: .8vw;
+    padding-top: 1vw;
+    padding-left: 1vw; 
+    grid-column: 8 /span 3;
+}
+
+
+/*------------------font linking------------------*/
+
+@font-face {
+    font-family: 'fivo_sans_modernregular';
+    src: url('fivosansmodern-regular.woff2') format('woff2'),
+         url('fivosansmodern-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fivo_sans_modernmedium';
+    src: url('fivosansmodern-medium.woff2') format('woff2'),
+         url('fivosansmodern-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
