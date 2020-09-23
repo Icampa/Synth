@@ -1,0 +1,262 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <title>Walk Memo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script src="sketch.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+ </head>
+ 
+ <body>
+       
+      
+      
+<!--------wrapper-------->    
+      
+<div class="wrapper"> 
+    
+    
+<!--------light-------->  
+      
+<div class="box one" style="padding-top: 3vw">      
+    <audio id="light" src="light.mp3" preload="auto" loop></audio>
+    <a onClick="lighttogglePlay();">
+       <center> <img src="walk-b.png" alt="walk" style= "width:11vw"/></center>    
+    </a>    
+
+    <script>
+        var light = document.getElementById("light");
+        var lightisPlaying = false;
+
+        function lighttogglePlay() {
+          if (lightisPlaying) {
+            light.pause()
+          } else {
+            light.play();
+          }
+        };
+        light.onplaying = function() {
+          lightisPlaying = true;
+        };
+        light.onpause = function() {
+          lightisPlaying = false;
+        };    
+    </script>
+</div>
+      
+<!--------bag-------->  
+<div class="box two" style="padding-top: 3vw"> 
+    <audio id="bag" src="bag.mp3" preload="auto" loop></audio>
+    <a onClick="bagtogglePlay();">
+       <center> <img src="bag.png" alt="bag" style= "width:11vw"/></center> 
+    </a>    
+
+    <script>
+        var bag = document.getElementById("bag");
+        var bagisPlaying = false;
+
+        function bagtogglePlay() {
+          if (bagisPlaying) {
+            bag.pause()
+          } else {
+            bag.play();
+          }
+        };
+        bag.onplaying = function() {
+          bagisPlaying = true;
+        };
+        bag.onpause = function() {
+          bagisPlaying = false;
+        };    
+    </script>  
+</div>
+<!--------bird-------->  
+<div class="box three" style="padding-top: 3vw">  
+    <audio id="bird" src="birds.mp3" preload="auto" loop> </audio>
+    <a onClick="birdtogglePlay();">
+        <center> <img src="bird.png" alt="bird" style= "width:11vw"/></center>   
+    </a>    
+
+    <script>
+        var bird = document.getElementById("bird");
+        var birdisPlaying = false;
+
+        function birdtogglePlay() {
+          if (birdisPlaying) {
+            bird.pause()
+          } else {
+            bird.play();
+          }
+        };
+        bird.onplaying = function() {
+          birdisPlaying = true;
+        };
+        bird.onpause = function() {
+          birdisPlaying = false;
+        };    
+    </script>   
+</div>   
+<!--------iphone-------->  
+<div class="box four" style="padding-top: 3vw"> 
+    <audio id="iphone" src="iphone.mp3" preload="auto" loop></audio>
+    <a onClick="iphonetogglePlay();">
+       <center> <img src="iphone.png" alt="iphone" style= "width:11vw"/></center>    
+    </a>    
+
+    <script>
+        var iphone = document.getElementById("iphone");
+        var iphoneisPlaying = false;
+
+        function iphonetogglePlay() {
+          if (iphoneisPlaying) {
+            iphone.pause()
+          } else {
+            iphone.play();
+          }
+        };
+        iphone.onplaying = function() {
+          iphoneisPlaying = true;
+        };
+        iphone.onpause = function() {
+          iphoneisPlaying = false;
+        };    
+    </script>
+</div>  
+
+
+<div class="synth">
+	<div id="canvasParent"></div>
+</div>
+
+   
+<!--------dog-------->  
+<div class="box five" style="align-items:baseline; vertical-align: baseline; align-self: baseline"> 
+    <audio id="dog" src="bark.mp3" preload="auto" loop></audio>
+    <a onClick="dogtogglePlay();">
+       <center> <img src="dog.png" alt="dog" style= " width:11vw"/></center>    
+    </a>    
+
+    <script>
+        var dog = document.getElementById("dog");
+        var dogisPlaying = false;
+
+        function dogtogglePlay() {
+          if (dogisPlaying) {
+            dog.pause()
+          } else {
+            dog.play();
+          }
+        };
+        dog.onplaying = function() {
+          dogisPlaying = true;
+        };
+        dog.onpause = function() {
+          dogisPlaying = false;
+        };    
+    </script>  
+</div>  
+<!--------bus-------->  
+<div class="box six" style=""> 
+    <audio id="bus" src="cars.mp3" preload="auto" loop></audio>
+    <a onClick="bustogglePlay();">
+       <center> <img src="bus.png" alt="bus" style= "width:11vw"/></center>    
+    </a>    
+
+    <script>
+        var bus = document.getElementById("bus");
+        var busisPlaying = false;
+
+        function bustogglePlay() {
+          if (busisPlaying) {
+            bus.pause()
+          } else {
+            bus.play();
+          }
+        };
+        bus.onplaying = function() {
+          busisPlaying = true;
+        };
+        bus.onpause = function() {
+          busisPlaying = false;
+        };    
+    </script>
+</div> 
+<!--------can-------->  
+<div class="box seven" style=""> 
+    <audio id="can" src="can.mp3" preload="auto" loop></audio>
+    <a onClick="cantogglePlay();">
+       <center> <img src="can.png" alt="can" style= "width:11vw"/></center>   
+    </a>    
+
+    <script>
+        var can = document.getElementById("can");
+        var canisPlaying = false;
+
+        function cantogglePlay() {
+          if (canisPlaying) {
+            can.pause()
+          } else {
+            can.play();
+          }
+        };
+        can.onplaying = function() {
+          canisPlaying = true;
+        };
+        can.onpause = function() {
+          canisPlaying = false;
+        };    
+    </script>
+</div>  
+<!--------board-------->  
+<div class="box eight" style=""> 
+    <audio id="board" src="skateboard.mp3" preload="auto" loop></audio>
+    <a onClick="boardtogglePlay();">
+       <center> <img src="board.png" alt="board" style= "width:11vw"/></center>    
+    </a>    
+    <script>
+        var board = document.getElementById("board");
+        var boardisPlaying = false;
+
+        function boardtogglePlay() {
+          if (boardisPlaying) {
+            board.pause()
+          } else {
+            board.play();
+          }
+        };
+        board.onplaying = function() {
+          boardisPlaying = true;
+        };
+        board.onpause = function() {
+          boardisPlaying = false;
+        };    
+    </script>
+</div>
+<!--------nav--------> 
+
+<div class="nav">
+    <a href="index.html" id="logo"><img src="logo.png" style="width:200px"></a>
+
+	 <div id="ex1" class="modal">
+	  <p>A simulation of the rhythm from surrounding sounds and movement expereinced during long walks. Walk Memo is a nostalgic ode to walks and noisy streets pre-quarantine.</p>
+	</div>
+
+	<p><a href="#ex1" rel="modal:open">?</a></p>
+
+    <a href="mailto:itsay.ana.cmpa@gmail.com">+</a>
+</div>
+
+
+
+</div>    
+    
+
+</body></html>
