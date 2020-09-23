@@ -4,6 +4,7 @@ var f;
 var t;
 var X;
 var Y;
+var c;
 
 
 var wave;
@@ -24,7 +25,8 @@ let value4 = 0;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 function setup(){
-	createCanvas(windowWidth, windowHeight);
+    c = createCanvas(880, 300)
+    c.parent('canvasParent')
 	note = new p5.Oscillator();
 	X = 0
 	Y = 0   
@@ -36,17 +38,17 @@ function setup(){
 
 function draw() {
  
-    translate(width/4.3, height/2.5);
+    translate(50, 50);
   
 	noFill();
     clear();
-    strokeWeight(.5);
-    stroke(0);
+    strokeWeight(.8);
+    stroke('#875e1e');
   
   //Number Keys
     push();
     if (key == '1'){	// set the note type to sine
-	fill(255,232,5);
+	fill('#875e1e');
     }
     rect(X, Y, 65, 75);
     rect(X+5, Y+10, 55, 55);
@@ -58,7 +60,7 @@ function draw() {
 
     push();
     if (key == '2'){	// set the note type to sine
-	fill(255,232,5);
+	fill('#875e1e');
     }
     rect(X+100, Y, 65, 75);
     rect(X+105, Y+10, 55, 55);
@@ -70,7 +72,7 @@ function draw() {
     
     push();
     if (key == '3'){	// set the note type to sine
-	fill(255,232,5);
+	fill('#875e1e');
     }
     rect(X+200, Y, 65, 75);
     rect(X+205, Y+10, 55, 55);
@@ -82,7 +84,7 @@ function draw() {
 
     push();
     if (key == '4'){	// set the note type to sine
-	fill(255,232,5);
+	fill('#875e1e');
     }
     rect(X+300, Y, 65, 75);
     rect(X+305, Y+10, 55, 55);
@@ -94,7 +96,7 @@ function draw() {
     
     push();
     if (key == ' '){	// set the note type to sine
-	fill(255,232,5);
+	fill('#875e1e');
     }
     rect(X+400, Y, 365, 75);
     rect(X+405, Y+10, 355, 55);
@@ -106,7 +108,7 @@ function draw() {
     
     push();
     if (key == 'a'){	// set the note type to sine
-	fill(255,232,5);
+	fill('#875e1e');
     }
     rect(X, Y+100, 65, 75);
     rect(X+5, Y+110, 55, 55);
@@ -118,7 +120,7 @@ function draw() {
 
     push();
     if (key == 's'){	// set the note type to sine
-	fill(255,232,5);
+	fill('#875e1e');
     }
     rect(X+100, Y+100, 65, 75);
     rect(X+105, Y+110, 55, 55);
@@ -130,7 +132,7 @@ function draw() {
     
     push();
     if (key == 'd'){	// set the note type to sine
-	fill(255,232,5);
+	fill('#875e1e');
     }
     rect(X+200, Y+100, 65, 75);
     rect(X+205, Y+110, 55, 55);
@@ -142,7 +144,7 @@ function draw() {
     
     push();
     if (key == 'f'){	// set the note type to sine
-	fill(255,232,5);
+	fill('#875e1e');
     }
     rect(X+300, Y+100, 65, 75);
     rect(X+305, Y+110, 55, 55);
@@ -154,7 +156,7 @@ function draw() {
     
     push();
     if (key == 'g'){	// set the note type to sine
-	fill(255,232,5);
+	fill('#875e1e');
     }
     rect(X+400, Y+100, 65, 75);
     rect(X+405, Y+110, 55, 55);
@@ -166,7 +168,7 @@ function draw() {
     
     push();
     if (key == 'h'){	// set the note type to sine
-	fill(255,232,5);
+	fill('#875e1e');
     }
     rect(X+500, Y+100, 65, 75);
     rect(X+505, Y+110, 55, 55);
@@ -178,7 +180,7 @@ function draw() {
     
     push();
     if (key == 'j'){	// set the note type to sine
-	fill(255,232,5);
+	fill('#875e1e');
     }
     rect(X+600, Y+100, 65, 75);
     rect(X+605, Y+110, 55, 55);
@@ -190,7 +192,7 @@ function draw() {
     
     push();
     if (key == 'k'){	// set the note type to sine
-	fill(255,232,5);
+	fill('#875e1e');
     }
     rect(X+700, Y+100, 65, 75);
     rect(X+705, Y+110, 55, 55);
@@ -202,9 +204,10 @@ function draw() {
     
 
     push();
-    fill(0);
-    textFont('fivo_sans_modernregular');
-  	textSize(15);
+    fill(255);
+    noStroke();
+    textFont('Helvetica');
+  	textSize(16);
     text('1', X+27, Y+55);
     text('2', X+127, Y+55);
     text('3', X+227, Y+55);
@@ -222,40 +225,40 @@ function draw() {
     
     push();
     textSize(12);
-    textFont('fivo_sans_modernregular');
-    if (key == 'a'){	// set the note type to sine
-	fill(0);} else{
-    fill(255,232,5); 
+    textFont('Helvetica');
+    if (key == 'a'){	
+	fill(255);} else{
+    fill('#875e1e'); 
     }
     text('DO', X+12, Y+126);
     pop();
     
     push();
     textSize(12);
-    textFont('fivo_sans_modernregular');
-    if (key == 's'){	// set the note type to sine
-	fill(0);} else{
-    fill(255,232,5); 
+    textFont('Helvetica');
+    if (key == 's'){	
+	fill(255);} else{
+    fill('#875e1e'); 
     }
     text('RE', X+112, Y+126);
     pop();
     
     push();
     textSize(12);
-    textFont('fivo_sans_modernregular');
-    if (key == 'd'){	// set the note type to sine
-	fill(0);} else{
-    fill(255,232,5); 
+    textFont('Helvetica');
+    if (key == 'd'){	
+	fill(255);} else{
+    fill('#875e1e'); 
     }
     text('MI', X+212, Y+126);
     pop();
     
     push();
     textSize(12);
-    textFont('fivo_sans_modernregular');
-    if (key == 'f'){	// set the note type to sine
-	fill(0);} else{
-    fill(255,232,5); 
+    textFont('Helvetica');
+    if (key == 'f'){	
+	fill(255);} else{
+    fill('#875e1e'); 
     }
     text('FA', X+312, Y+126);
     pop();
@@ -263,53 +266,53 @@ function draw() {
     push();
     fill(0, 0, 255);
     textSize(12);
-    textFont('fivo_sans_modernregular');
-    if (key == 'g'){	// set the note type to sine
-	fill(0);} else{
-    fill(255,232,5); 
+    textFont('Helvetica');
+    if (key == 'g'){	
+	fill(255);} else{
+    fill('#875e1e'); 
     }
     text('SOL', X+412, Y+126);
     pop();
     
     push();
     textSize(12);
-    textFont('fivo_sans_modernregular');
-    if (key == 'h'){	// set the note type to sine
-	fill(0);} else{
-    fill(255,232,5); 
+    textFont('Helvetica');
+    if (key == 'h'){	
+	fill(255);} else{
+    fill('#875e1e'); 
     }
     text('LA', X+512, Y+126);
     pop();
     
     push();
     textSize(12);
-    textFont('fivo_sans_modernregular');
-    if (key == 'j'){	// set the note type to sine
-	fill(0);} else{
-    fill(255,232,5); 
+    textFont('Helvetica');
+    if (key == 'j'){	
+	fill(255);} else{
+    fill('#875e1e'); 
     }
     text('SI', X+612, Y+126);
     pop();
     
     push();
     textSize(12);
-    textFont('fivo_sans_modernregular');
-    if (key == 'k'){	// set the note type to sine
-	fill(0);} else{
-    fill(255,232,5); 
+    textFont('Helvetica');
+    if (key == 'k'){	
+	fill(255);} else{
+    fill('#875e1e'); 
     }
     text('DO+', X+712, Y+126);
     pop();
     
     push();
     noFill();
-    strokeWeight(1);
-    stroke(255,232,5);
+    strokeWeight(2);
+    stroke('#875e1e');
     //sine sign
     push();
-    if (key == '1'){	// set the note type to sine
-	stroke(0);} else{
-    stroke(255,232,5); 
+    if (key == '1'){	
+	stroke(255);} else{
+    stroke('#875e1e'); 
     }
     arc(X+22, Y+13, 25, 40, PI+4, PI);
     arc(X+41, Y+39, 25, 40, PI+1, PI+3);
@@ -317,9 +320,9 @@ function draw() {
     
     //square sign
     push();
-    if (key == '2'){	// set the note type to sine
-	stroke(0);} else{
-    stroke(255,232,5); 
+    if (key == '2'){	
+	stroke(255);} else{
+    stroke('#875e1e'); 
     }
     line(X+112, Y+37, X+112, Y+17);
     line(X+112, Y+17, X+132, Y+17);
@@ -330,9 +333,9 @@ function draw() {
     
     //triangle sign
     push();
-    if (key == '3'){	// set the note type to sine
-	stroke(0);} else{
-    stroke(255,232,5); 
+    if (key == '3'){	
+	stroke(255);} else{
+    stroke('#875e1e'); 
     }
     line(X+212, Y+17, X+226, Y+37);
     line(X+226, Y+37, X+236, Y+17);
@@ -341,16 +344,14 @@ function draw() {
     
     //sawtooth sign
     push();
-    if (key == '4'){	// set the note type to sine
-	stroke(0);} else{
-    stroke(255,232,5); 
+    if (key == '4'){	
+	stroke(255);} else{
+    stroke('#875e1e'); 
     }
     line(X+312, Y+40, X+334, Y+17);
     line(X+334, Y+40, X+334, Y+17);
     line(X+334, Y+40, X+352, Y+17);
-    pop();
-    
-    
+    pop();  
     
 }
 
@@ -477,12 +478,6 @@ function keyTyped() {
 
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
 
 
